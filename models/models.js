@@ -12,6 +12,7 @@ const UserSchema = new Schema({
     phone: {
         type: String,
         required: false,
+        unique: true,
     },
     age: {
         type: Number,
@@ -201,12 +202,12 @@ const OrderSchema = new Schema({
     },
 });
 
-const User = model("User", UserSchema);
-const Credit = model("Credit", CreditSchema);
-const Payment = model("Payment", PaymentSchema);
-const Shop = model("Shop", ShopSchema);
-const Category = model("Category", CategorySchema);
-const Product = model("Product", ProductSchema);
-const Variant = model("Variant", VariantSchema);
-const Unit = model("Unit", UnitSchema);
-const Order = model("Order", OrderSchema);
+export const User = model("User", UserSchema);
+export const Credit = model("Credit", CreditSchema);
+export const Payment = model("Payment", PaymentSchema);
+export const Shop = model("Shop", ShopSchema);
+export const Category = model("Category", CategorySchema);
+export const Product = model("Product", ProductSchema);
+export const Variant = model("Variant", VariantSchema);
+export const Unit = model("Unit", UnitSchema);
+export const Order = model("Order", OrderSchema);
