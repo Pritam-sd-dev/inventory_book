@@ -22,12 +22,11 @@ const UserSchema = new Schema({
         type: String,
         required: false,
     },
-    roles: [
-        {
-            type: String,
-            enum: ["CUSTOMER", "SHOP_OWNER", "SHOP_BUDDY"],
-        },
-    ],
+    roles: {
+        type: [String],
+        enum: ["CUSTOMER", "SHOP_OWNER", "SHOP_BUDDY"],
+        default: ["CUSTOMER"],
+    },
 });
 
 const CreditSchema = new Schema({
