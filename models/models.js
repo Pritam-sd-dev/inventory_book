@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import jwt from "jsonwebtoken";
 
 const UserSchema = new Schema({
     name: {
@@ -28,6 +29,18 @@ const UserSchema = new Schema({
         default: ["CUSTOMER"],
     },
 });
+
+UserSchema.methods = {
+    generateToken: function () {
+        return jwt.sign(
+            { id: this._id, name: this.name, roles: this.roles },
+            process.env.JWT_SECRET,
+            {
+                expiresIn: process.env.JWT_EXPIRY,
+            }
+        );
+    },
+};
 
 const CreditSchema = new Schema({
     createdAt: {
