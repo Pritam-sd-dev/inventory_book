@@ -101,7 +101,6 @@ const CategorySchema = new Schema({
     },
     imageUrl: {
         type: String,
-        required: true,
     },
     shop: {
         type: Schema.Types.ObjectId,

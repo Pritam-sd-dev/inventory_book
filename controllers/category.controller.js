@@ -16,8 +16,9 @@ export const createCategory = async (request, response) => {
             data: { categoryId: savedCategory.id },
         });
     } catch (error) {
+        console.log(error);
         return response
             .status(500)
-            .json({ success: false, message: "internal server error :)" });
+            .json({ success: false, message: "internal server error :(" });
     }
 }
