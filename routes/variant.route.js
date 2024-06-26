@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { createVariant } from "../controllers/variant.controller";
-import isLoggedIn from "../middlewares/auth";
+import { createVariant } from "../controllers/variant.controller.js";
+import isLoggedIn from "../middlewares/auth.js";
 
 const router = Router();
 

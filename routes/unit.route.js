@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { createUnit } from "../controllers/unit.controller";
-import isLoggedIn from "../middlewares/auth";
+import { createUnit } from "../controllers/unit.controller.js";
+import isLoggedIn from "../middlewares/auth.js";
 
 const router = Router();
 

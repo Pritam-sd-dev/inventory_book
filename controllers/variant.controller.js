@@ -1,4 +1,4 @@
-import { Variant } from "../models/models";
+import { Variant } from "../models/models.js";
 
 
 export const createVariant = async (request, response) => {
