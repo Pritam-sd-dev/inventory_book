@@ -126,15 +126,15 @@ const ProductSchema = new Schema({
         required: true,
     },
     manufacturingDate: {
-        type: Date,
+        type: String,
         required: true,
     },
     expiryDate: {
-        type: Date,
+        type: String,
         required: true,
     },
     purchaseDate: {
-        type: Date,
+        type: String,
         required: true,
     },
     barcode: {

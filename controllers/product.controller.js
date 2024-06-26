@@ -26,7 +26,7 @@ export const createProduct = async (request, response) => {
     const {
         name,
         mrp,
-        selleingPrice,
+        sellingPrice,
         purchasePrice,
         manufacturingDate,
         expiryDate,
@@ -47,7 +47,7 @@ export const createProduct = async (request, response) => {
         const savedProduct = await Product.create({
             name,
             mrp,
-            selleingPrice,
+            sellingPrice,
             purchasePrice,
             manufacturingDate,
             expiryDate,
@@ -68,8 +68,9 @@ export const createProduct = async (request, response) => {
             data: { productId: savedProduct.id },
         });
     } catch (error) {
+        console.log(error);
         return response
             .status(500)
-            .json({ success: false, message: "internal server error :)" });
+            .json({ success: false, message: "internal server error :(" });
     }
 };
