@@ -1,7 +1,7 @@
 import { Product } from "../models/models.js";
 
 export const getProductByBarcodeAndShopId = async (request, response) => {
-    const { barcode, shopId } = request.params;
+    const { barcode, shopId } = request.query;
  
     if((barcode || shopId) == undefined) {
         return response
